@@ -1,0 +1,19 @@
+# C++ compiled executables
+*.exe
+*.out
+a.out
+
+# Object files
+*.o
+*.obj
+
+# Libraries
+*.dll
+*.so
+*.a
+*.lib
+
+# Debug files
+*.pdb
+*.ilk
+*.dSYM/
