@@ -3,12 +3,12 @@ using namespace std;
 
 vector<int> solve(vector<int> &a, vector<int> &b)
 {
-    multiset<int> st(a.begin(), a.end());
+    multiset<int> st(a.begin(), a.end());//Space Complexity -> O(n) + Time Complexity For creating set -> O(nlogn)
     vector<int> result;
 
     for(int i = 0; i < (int)b.size(); i++) //O(m)
     {
-        auto it = st.upper_bound(b[i]);
+        auto it = st.upper_bound(b[i]);//O(logn)
 
         if(it == st.begin())
         result.push_back(-1);
@@ -53,3 +53,6 @@ int main()
         cout << it << "\n";
     }
 }
+
+//Time Complexity -> nlogn + mlogn => [ (n + m)logn ]
+//Space Complexity -> O(n)
